@@ -109,10 +109,11 @@ public class EventAbstractionListener extends AbstractListener {
             getPlugin().getServer().getPluginManager().registerEvents(new SpigotCompatListener(), getPlugin());
         } catch (LinkageError ignored) {
         }
+        /*
         try {
             getPlugin().getServer().getPluginManager().registerEvents(new LingeringPotionListener(), getPlugin());
         } catch (NoClassDefFoundError ignored) {
-        }
+        }*/
     }
 
     //-------------------------------------------------------------------------
@@ -927,11 +928,12 @@ public class EventAbstractionListener extends AbstractListener {
             return;
         }
 
-        if (item != null && item.getType() == Material.END_CRYSTAL) { /*&& placed.getType() == Material.BEDROCK) {*/ // in vanilla you can only place them on bedrock but who knows what plugins will add
+        /*
+        if (item != null && item.getType() == Material.END_CRYSTAL) { /*&& placed.getType() == Material.BEDROCK) { // in vanilla you can only place them on bedrock but who knows what plugins will add
                                                                                                                         // may be overprotective as a result, but better than being underprotective
             Events.fireToCancel(event, new SpawnEntityEvent(event, cause, placed.getLocation().add(0.5, 0, 0.5), EntityType.ENDER_CRYSTAL));
             return;
-        }
+        }*/
 
         // Handle created spawn eggs
         if (item != null && item.getType() == Material.MONSTER_EGG) {
@@ -1018,6 +1020,7 @@ public class EventAbstractionListener extends AbstractListener {
         }
     }
 
+    /*
     public class LingeringPotionListener implements Listener {
         @EventHandler(ignoreCancelled = true)
         public void onLingeringSplash(LingeringPotionSplashEvent event) {
@@ -1035,5 +1038,5 @@ public class EventAbstractionListener extends AbstractListener {
                 Events.fireToCancel(event, new SpawnEntityEvent(event, cause, aec.getLocation().add(0.5, 0, 0.5), EntityType.AREA_EFFECT_CLOUD));
             }
         }
-    }
+    }*/
 }

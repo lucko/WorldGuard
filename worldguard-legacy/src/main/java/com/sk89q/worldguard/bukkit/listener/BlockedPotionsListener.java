@@ -28,8 +28,6 @@ import com.sk89q.worldguard.bukkit.util.Entities;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.SpectralArrow;
-import org.bukkit.entity.TippedArrow;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.inventory.ItemStack;
@@ -60,6 +58,7 @@ public class BlockedPotionsListener extends AbstractListener {
                 ConfigurationManager cfg = getPlugin().getGlobalStateManager();
                 WorldConfiguration wcfg = cfg.get(event.getWorld());
                 PotionEffectType blockedEffect = null;
+                /*
                 if (originalEvent.getDamager() instanceof SpectralArrow) {
                     if (wcfg.blockPotions.contains(PotionEffectType.GLOWING)) {
                         blockedEffect = PotionEffectType.GLOWING;
@@ -77,7 +76,7 @@ public class BlockedPotionsListener extends AbstractListener {
                             }
                         }
                     }
-                }
+                }*/
                 if (blockedEffect != null) {
                     Player player = event.getCause().getFirstPlayer();
                     if (player != null) {
@@ -93,6 +92,7 @@ public class BlockedPotionsListener extends AbstractListener {
         }
     }
 
+    /*
     @EventHandler
     public void onItemInteract(UseItemEvent event) {
         ConfigurationManager cfg = getPlugin().getGlobalStateManager();
@@ -170,6 +170,6 @@ public class BlockedPotionsListener extends AbstractListener {
                 }
             }
         }
-    }
+    }*/
 
 }

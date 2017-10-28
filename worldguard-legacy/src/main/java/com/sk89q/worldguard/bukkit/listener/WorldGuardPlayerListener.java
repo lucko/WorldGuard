@@ -379,6 +379,7 @@ public class WorldGuardPlayerListener implements Listener {
                     return;
                 }
             }
+            /*
             try {
                 if (event.getCause() == TeleportCause.CHORUS_FRUIT) {
                     if (!plugin.getGlobalRegionManager().hasBypass(localPlayer, world)) {
@@ -392,7 +393,7 @@ public class WorldGuardPlayerListener implements Listener {
                         }
                     }
                 }
-            } catch (NoSuchFieldError ignored) {}
+            } catch (NoSuchFieldError ignored) {}*/
         }
     }
 

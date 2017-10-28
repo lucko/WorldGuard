@@ -47,9 +47,10 @@ public final class Materials {
     private static final Set<PotionEffectType> DAMAGE_EFFECTS = new HashSet<PotionEffectType>();
 
 
-    private static Set<Material> shulkerBoxes = new HashSet<>();
+    //private static Set<Material> shulkerBoxes = new HashSet<>();
 
     static {
+        /*
         shulkerBoxes.add(Material.WHITE_SHULKER_BOX);
         shulkerBoxes.add(Material.ORANGE_SHULKER_BOX);
         shulkerBoxes.add(Material.MAGENTA_SHULKER_BOX);
@@ -66,6 +67,7 @@ public final class Materials {
         shulkerBoxes.add(Material.GREEN_SHULKER_BOX);
         shulkerBoxes.add(Material.RED_SHULKER_BOX);
         shulkerBoxes.add(Material.BLACK_SHULKER_BOX);
+        */
 
         ENTITY_ITEMS.put(EntityType.PAINTING, Material.PAINTING);
         ENTITY_ITEMS.put(EntityType.ARROW, Material.ARROW);
@@ -287,6 +289,7 @@ public final class Materials {
         MATERIAL_FLAGS.put(Material.ACACIA_DOOR, MODIFIED_ON_RIGHT);
         MATERIAL_FLAGS.put(Material.DARK_OAK_DOOR, MODIFIED_ON_RIGHT);
 
+        /*
         MATERIAL_FLAGS.put(Material.GRASS_PATH, 0);
         MATERIAL_FLAGS.put(Material.CHORUS_PLANT, 0);
         MATERIAL_FLAGS.put(Material.CHORUS_FLOWER, 0);
@@ -302,8 +305,9 @@ public final class Materials {
         MATERIAL_FLAGS.put(Material.PURPUR_SLAB, 0);
         MATERIAL_FLAGS.put(Material.STRUCTURE_BLOCK, MODIFIED_ON_LEFT | MODIFIED_ON_RIGHT);
         MATERIAL_FLAGS.put(Material.COMMAND_REPEATING, MODIFIED_ON_RIGHT);
-        MATERIAL_FLAGS.put(Material.COMMAND_CHAIN , MODIFIED_ON_RIGHT);
+        MATERIAL_FLAGS.put(Material.COMMAND_CHAIN , MODIFIED_ON_RIGHT);*/
 
+        /*
         MATERIAL_FLAGS.put(Material.MAGMA, 0);
         MATERIAL_FLAGS.put(Material.NETHER_WART_BLOCK, 0);
         MATERIAL_FLAGS.put(Material.RED_NETHER_BRICK, 0);
@@ -312,7 +316,9 @@ public final class Materials {
         for (Material m : shulkerBoxes) {
             MATERIAL_FLAGS.put(m, MODIFIED_ON_RIGHT);
         }
+        */
         // 1.12
+        /*
         MATERIAL_FLAGS.put(Material.CONCRETE, 0);
         MATERIAL_FLAGS.put(Material.CONCRETE_POWDER, 0);
 
@@ -332,6 +338,7 @@ public final class Materials {
         MATERIAL_FLAGS.put(Material.GREEN_GLAZED_TERRACOTTA, 0);
         MATERIAL_FLAGS.put(Material.RED_GLAZED_TERRACOTTA, 0);
         MATERIAL_FLAGS.put(Material.BLACK_GLAZED_TERRACOTTA, 0);
+        */
 
         MATERIAL_FLAGS.put(Material.IRON_SPADE, MODIFIES_BLOCKS);
         MATERIAL_FLAGS.put(Material.IRON_PICKAXE, 0);
@@ -513,6 +520,7 @@ public final class Materials {
         MATERIAL_FLAGS.put(Material.ACACIA_DOOR_ITEM, 0);
         MATERIAL_FLAGS.put(Material.DARK_OAK_DOOR_ITEM, 0);
 
+        /*
         MATERIAL_FLAGS.put(Material.BOAT_SPRUCE, 0);
         MATERIAL_FLAGS.put(Material.BOAT_BIRCH, 0);
         MATERIAL_FLAGS.put(Material.BOAT_ACACIA, 0);
@@ -528,11 +536,11 @@ public final class Materials {
         MATERIAL_FLAGS.put(Material.DRAGONS_BREATH, 0);
         MATERIAL_FLAGS.put(Material.LINGERING_POTION, 0);
         MATERIAL_FLAGS.put(Material.ELYTRA, 0);
-        MATERIAL_FLAGS.put(Material.END_CRYSTAL, 0);
+        MATERIAL_FLAGS.put(Material.END_CRYSTAL, 0);*/
 
-        MATERIAL_FLAGS.put(Material.TOTEM, 0);
-        MATERIAL_FLAGS.put(Material.SHULKER_SHELL, 0);
-        MATERIAL_FLAGS.put(Material.KNOWLEDGE_BOOK, 0);
+        //MATERIAL_FLAGS.put(Material.TOTEM, 0);
+        //MATERIAL_FLAGS.put(Material.SHULKER_SHELL, 0);
+        //MATERIAL_FLAGS.put(Material.KNOWLEDGE_BOOK, 0);
 
         MATERIAL_FLAGS.put(Material.GOLD_RECORD, 0);
         MATERIAL_FLAGS.put(Material.GREEN_RECORD, 0);
@@ -571,8 +579,8 @@ public final class Materials {
         DAMAGE_EFFECTS.add(PotionEffectType.WEAKNESS);
         DAMAGE_EFFECTS.add(PotionEffectType.WITHER);
 
-        DAMAGE_EFFECTS.add(PotionEffectType.LEVITATION); // considered by game so I guess
-        DAMAGE_EFFECTS.add(PotionEffectType.UNLUCK);
+        //DAMAGE_EFFECTS.add(PotionEffectType.LEVITATION); // considered by game so I guess
+        //DAMAGE_EFFECTS.add(PotionEffectType.UNLUCK);
 
     }
 
@@ -732,12 +740,12 @@ public final class Materials {
      * @return true if a Boat item
      */
     public static boolean isBoat(Material material) {
-            return material == Material.BOAT
-                    || material == Material.BOAT_ACACIA
-                    || material == Material.BOAT_SPRUCE
-                    || material == Material.BOAT_DARK_OAK
-                    || material == Material.BOAT_JUNGLE
-                    || material == Material.BOAT_BIRCH;
+            return material == Material.BOAT;
+                    //|| material == Material.BOAT_ACACIA
+                    //|| material == Material.BOAT_SPRUCE
+                    //|| material == Material.BOAT_DARK_OAK
+                    //|| material == Material.BOAT_JUNGLE
+                    //|| material == Material.BOAT_BIRCH;
     }
 
     /**
@@ -755,8 +763,8 @@ public final class Materials {
                 || material == Material.BREWING_STAND
                 || material == Material.TRAPPED_CHEST
                 || material == Material.HOPPER
-                || material == Material.DROPPER
-                || shulkerBoxes.contains(material);
+                || material == Material.DROPPER;
+                //|| shulkerBoxes.contains(material);
     }
 
     /**

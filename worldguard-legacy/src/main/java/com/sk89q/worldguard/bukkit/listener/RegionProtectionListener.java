@@ -202,9 +202,9 @@ public class RegionProtectionListener extends AbstractListener {
                 /* Everything else */
                 } else {
                     canPlace = query.testBuild(target, associable, combine(event, DefaultFlag.BLOCK_PLACE));
-                    try {
+                    /*try {
                         event.setSilent(type == Material.FROSTED_ICE);
-                    } catch (NoSuchFieldError ignored) {} // back compat
+                    } catch (NoSuchFieldError ignored) {} // back compat*/
                     what = "place that block";
                 }
 

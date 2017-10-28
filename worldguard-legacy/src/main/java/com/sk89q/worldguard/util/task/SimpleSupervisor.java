@@ -56,7 +56,7 @@ public class SimpleSupervisor implements Supervisor {
                     monitored.remove(task);
                 }
             }
-        }, MoreExecutors.directExecutor());
+        }, MoreExecutors.sameThreadExecutor());
     }
 
 }
